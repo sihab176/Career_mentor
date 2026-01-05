@@ -5,9 +5,9 @@ import React from "react";
 const AiCareerChat = () => {
   return (
     <div>
-        <div className="border-b border bg-amber-500 ">
-            <Navbar/>
-        </div>
+      <div className="border-b border bg-amber-500 ">
+        <Navbar />
+      </div>
       <CareerBot />
     </div>
   );

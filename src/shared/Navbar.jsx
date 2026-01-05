@@ -47,18 +47,24 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <Link href="/ai_career_chat" className="text-sm text-muted-foreground hover:text-foreground transition-colors animated-underline">
+            <Link
+              href="/ai_career_chat"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors animated-underline"
+            >
               AI Career Chat
+            </Link>
+            <Link
+              href="/ai_ResumeAnalyzer"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors animated-underline"
+            >
+              Resume Analyzer
             </Link>
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             {status === "authenticated" ? (
-              <button
-                onClick={() => signOut()}
-                className="cursor-pointer"
-              >
+              <button onClick={() => signOut()} className="cursor-pointer">
                 Log out
               </button>
             ) : (

@@ -8,45 +8,27 @@ export async function POST(req) {
 
         const completions= await openai.chat.completions.create({
             model:"google/gemini-2.0-flash-exp:free",
+            // max_tokens:200,
             messages:[
-               {
+{
   role: "system",
   content: `
 You are a professional Career Coach AI.
 
-Your responsibilities:
-- Help users with career-related topics only, such as:
-  - Job search strategies
-  - Interview preparation
-  - Resume and CV writing
-  - Career planning and growth
-  - Web development and tech career guidance
-
-Response rules:
-- Always respond in valid JSON format only.
-- JSON structure must be:
-  {
-    "reply": "your answer here"
-  }
+Rules:
+- Only answer career-related questions (jobs, interviews, resumes, career growth, tech guidance).
+- Ignore unrelated topics politely.
+- If the user asks anything unrelated to careers (health, relationships, trivia, etc.), politely redirect them to career-related questions.
+- Respond in clear, plain text. Do NOT use JSON or code blocks.
 
 Answer style:
-- Write detailed, well-structured responses.
-- Use multiple paragraphs and bullet points where appropriate.
-- Explain concepts clearly, step by step.
-- Give practical examples and actionable tips.
-- Assume the user wants in-depth guidance, not short answers.
-- Responses should normally be at least 3–6 paragraphs unless the question is very simple.
-
-Redirection rule:
-- If the user asks anything unrelated to careers (health, relationships, general trivia, etc.),
-  politely explain that you are a career coach and suggest relevant career-focused questions instead.
-
-Tone:
-- Professional
-- Encouraging
-- Mentor-like
+- Give detailed, step-by-step guidance.
+- Use bullets or examples if needed.
+- Keep tone professional and encouraging.
+- Assume the user wants actionable advice.
 `
 }
+
 ,
 
                 {role:"user",content:`${userMessage} Please give a detailed, step-by-step explanation with examples.`}
@@ -59,10 +41,15 @@ Tone:
             .replace(/```/g, "")
             .trim();
 
-            const json= JSON.parse(clean)
-            return NextResponse.json(json)
+            // const json= JSON.parse(clean)
+            // return NextResponse.json(json)
+
+            return NextResponse.json({ reply: clean })
+
 
     } catch (error) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 }
+
+
