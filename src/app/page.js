@@ -1,6 +1,8 @@
 "use client"
 import Hero from "@/components/Hero";
+import HowItWorks from "@/components/HowItWorks";
 import ProblemSection from "@/components/ProblemSection";
+import ResumeScoring from "@/components/ResumeScoring";
 import Navbar from "@/shared/Navbar";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -23,9 +25,8 @@ export default function Home() {
       <div id="smooth-content">
        <Hero/>
        <ProblemSection/>
-      <div className=" px-6 h-screen flex items-center bg-sky-500">
-        <h1 className="text-4xl font-bold">Career Mentor AI</h1>
-      </div>
+       <ResumeScoring/>
+       <HowItWorks/>
       <div className=" px-6 h-screen flex items-center bg-amber-500">
         <h1 className="text-4xl font-bold">Career Mentor AI</h1>
       </div>

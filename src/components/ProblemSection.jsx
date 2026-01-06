@@ -74,7 +74,7 @@ const ProblemSection = () => {
   return (
     <section
       ref={containerRef}
-      className="message-content overflow-hidden z-50  bg-[#00185aea] text-white py-20 px-6 min-h-screen flex flex-col items-center justify-center"
+      className="message-content overflow-hidden z-50   bg-linear-to-b from-black/92 to-gray-900 text-white py-20 px-6 min-h-screen flex flex-col items-center justify-center"
     >
       {/* Header Section */}
       <div className="text-center mb-16">
@@ -88,11 +88,11 @@ const ProblemSection = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full ">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="career-card bg-[#111113] border border-gray-800 p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 hover:border-gray-600 hover:scale-105"
+            className=" bg-[#111113] hover:shadow-xl hover:shadow-blue-600/20 border border-gray-800 p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 hover:border-gray-600 hover:scale-105"
           >
             <div className="bg-[#1a1a1c] p-4 rounded-xl mb-6 shadow-inner">
               {card.icon}
