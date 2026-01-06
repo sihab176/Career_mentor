@@ -4,7 +4,7 @@ import React from "react";
 
 const AiCareerChat = () => {
   return (
-    <div>
+    <div className="bg-black/94">
       <div className="border-b border bg-amber-500 ">
         <Navbar />
       </div>
