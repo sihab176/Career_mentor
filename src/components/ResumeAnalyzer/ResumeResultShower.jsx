@@ -18,24 +18,24 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
   return (
     <>
       {extractedText && (
-        <div className=" ">
-          <div className="">
+        <div className="mt-5 ">
+          <div className="pb-20">
             {/* Content Area */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {/* Left Column - Analysis Cards */}
               <div className="space-y-6">
                 {/*//! ats score */}
-                <div className="bg-white rounded-2xl p-6 shadow-sm">
-                  <h3 className=" font-medium text-gray-500 mb-3">
+                <div className="bg-[#0d101dc0] rounded-2xl p-6 shadow-sm shadow-blue-500">
+                  <h3 className=" font-medium text-gray-100 mb-3">
                     ATS Compatibility Score
                   </h3>
                   <div className="flex items-end gap-2 mb-2">
-                    <span className="text-5xl font-bold text-gray-900">
+                    <span className="text-5xl font-bold text-gray-400">
                       {extractedText?.ats_compatibility_score || 0}
                     </span>
                     {/* <span className="text-2xl text-gray-400 mb-2">/100</span> */}
                   </div>
-                  <span className="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                  <span className="inline-block px-3 py-1 bg-green-300 text-green-700 rounded-full text-sm font-medium">
                     Excellent!
                   </span>
                   <p className="text-sm text-gray-500 mt-3">
@@ -46,11 +46,11 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                 {/*Metrics Grid */}
                 <div className="grid grid-cols-2 gap-4">
                   {/*//!  Overall Score */}
-                  <div className="bg-white rounded-2xl p-6 shadow-sm">
-                    <h3 className=" font-medium text-gray-500 mb-3">
+                  <div className="bg-[#0d101dc0] rounded-2xl p-6 shadow-sm shadow-blue-500">
+                    <h3 className=" font-medium text-gray-100 mb-3">
                       Overall Score
                     </h3>
-                    <div className="text-4xl font-bold text-gray-900 mb-2">
+                    <div className="text-4xl font-bold text-gray-400 mb-2">
                       {extractedText?.overall_score || 0}
                     </div>
                     <p className="text-xs text-gray-500">
@@ -59,11 +59,11 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                   </div>
 
                   {/*//! messing sections  */}
-                  <div className="bg-white rounded-2xl p-6 shadow-sm">
-                    <h3 className=" font-medium text-gray-500 mb-3">
+                  <div className="bg-[#0d101dee] rounded-2xl p-6 shadow-sm shadow-blue-500">
+                    <h3 className=" font-medium text-gray-100 mb-3">
                       Keywords Used
                     </h3>
-                    <div className="text-4xl font-bold text-gray-900 mb-2">
+                    <div className="text-4xl font-bold text-gray-400 mb-2">
                       {extractedText?.keywords_found?.length || 0}
                     </div>
                     <p className="text-xs text-gray-500">
@@ -73,10 +73,10 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                 </div>
 
                 {/*//todo: weekness  */}
-                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                <div className="bg-[#0d101dc0] rounded-2xl p-6 shadow-sm shadow-blue-500">
                   <div className="flex items-center gap-2 mb-4">
                     <TrendingDown className="w-5 h-5 text-red-500" />
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-gray-100">
                       Weaknesses of Your Resume
                     </h3>
                   </div>
@@ -88,8 +88,8 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                           key={index}
                           className="border-l-4 border-red-500 pl-3 "
                         >
-                          <h4 className="font-medium text-gray-900 text-xl mb-1">
-                           {String(index + 1).padStart(2, "0")}
+                          <h4 className="font-medium text-gray-500 text-xl mb-1">
+                           {String(index + 1).padStart(2, "0")}00
                           </h4>
                           <p className="text-sm text-gray-600">{weakness}</p>
                         </div>
@@ -98,10 +98,10 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                   )}
                 </div>
                 {/* Strengths Points */}
-                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                <div className="bg-[#0d101dc0] rounded-2xl p-6 shadow-sm shadow-blue-500">
                   <div className="flex items-center gap-2 mb-4">
                     <Zap className="w-5 h-5 text-blue-600" />
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-gray-100">
                       Strengths Points of Your Resume
                     </h3>
                   </div>
@@ -176,10 +176,10 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
               )}
             </div>
             {/* tips section */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm mt-6">
+            <div className="bg-[#0d101dc0] rounded-2xl p-6 shadow-sm mt-6 shadow-blue-500">
               <div className="flex items-center gap-2 mb-4">
                 <Lightbulb className="w-5 h-5 text-yellow-500" />
-                <h3 className="text-lg font-semibold text-gray-900">
+                <h3 className="text-lg font-semibold text-gray-100">
                   Weaknesses of Your Resume
                 </h3>
               </div>

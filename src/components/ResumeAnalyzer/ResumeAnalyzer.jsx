@@ -63,7 +63,7 @@ export default function ResumeAnalyzer() {
   console.log("image url link ", imageUrl);
 
   return (
-    <div className="bg-linear-to-br from-slate-50 to-blue-50 min-h-screen ">
+    <div className="bg-black/95 min-h-screen ">
       {/* header */}
       <header className="flex top-0 sticky z-10 bg-white items-center justify-between mb-8 px-6 py-3 border-b border-gray-200">
         <div className="flex items-center gap-2">
@@ -87,7 +87,7 @@ export default function ResumeAnalyzer() {
         /> */}
         <label
           htmlFor="file-upload"
-          className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer bg-white hover:bg-gray-50 transition"
+          className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer bg-[#0d101dc0] hover:bg-black/80 transition"
         >
           {/* Icon */}
           <svg

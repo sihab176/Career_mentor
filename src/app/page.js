@@ -1,8 +1,11 @@
 "use client"
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import ProblemSection from "@/components/ProblemSection";
 import ResumeScoring from "@/components/ResumeScoring";
+import TestimonialSection from "@/components/TestimonialSection";
+import TrustSection from "@/components/TrustSection";
 import Navbar from "@/shared/Navbar";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -27,9 +30,9 @@ export default function Home() {
        <ProblemSection/>
        <ResumeScoring/>
        <HowItWorks/>
-      <div className=" px-6 h-screen flex items-center bg-amber-500">
-        <h1 className="text-4xl font-bold">Career Mentor AI</h1>
-      </div>
+       <TestimonialSection/>
+       <TrustSection/>
+       <Footer/>
      </div>
      </div>
     </section>

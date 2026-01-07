@@ -83,7 +83,7 @@ const ProblemSection = () => {
         </h4>
         <h2 className="text-4xl md:text-6xl font-bold">
           The Career Struggle <br />{" "}
-          <span className="text-gray-500 text-3xl md:text-5xl">is Real</span>
+          <span className=" text-3xl md:text-5xl text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400">is Real</span>
         </h2>
       </div>
 
