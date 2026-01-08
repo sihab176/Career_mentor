@@ -30,15 +30,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-teal-400 flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
+            <div className="w-10 h-10 rounded-xl  flex items-center justify-center">
+              <Sparkles size={28} className=" text-linear-to-r from-teal-400 to-cyan-500 " />
+
             </div>
-            <span className="font-bold text-xl">CareerAI</span>
+            <h2 className="text-3xl font-bold bg-linear-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
+              CareerMentor AI
+            </h2>
           </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            {["Features", "Pricing", "About", "Blog"].map((item) => (
+            {["Features",].map((item) => (
               <a
                 key={item}
                 href="#"
@@ -47,6 +50,12 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
+            <Link
+              href="/blog"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors animated-underline"
+            >
+              Blog
+            </Link>
             <Link
               href="/ai_career_chat"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors animated-underline"

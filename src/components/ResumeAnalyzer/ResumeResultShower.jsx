@@ -76,7 +76,7 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                 <div className="bg-[#0d101dc0] rounded-2xl p-6 shadow-sm shadow-blue-500">
                   <div className="flex items-center gap-2 mb-4">
                     <TrendingDown className="w-5 h-5 text-red-500" />
-                    <h3 className="text-lg font-semibold text-gray-100">
+                    <h3 className="text-lg font-semibold text-gray-50">
                       Weaknesses of Your Resume
                     </h3>
                   </div>
@@ -88,10 +88,10 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                           key={index}
                           className="border-l-4 border-red-500 pl-3 "
                         >
-                          <h4 className="font-medium text-gray-500 text-xl mb-1">
-                           {String(index + 1).padStart(2, "0")}00
+                          <h4 className="font-medium text-gray-200 text-xl mb-1">
+                           {String(index + 1).padStart(2, "0")}
                           </h4>
-                          <p className="text-sm text-gray-600">{weakness}</p>
+                          <p className="text-sm text-gray-400">{weakness}</p>
                         </div>
                       ))}
                     </div>
@@ -101,7 +101,7 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                 <div className="bg-[#0d101dc0] rounded-2xl p-6 shadow-sm shadow-blue-500">
                   <div className="flex items-center gap-2 mb-4">
                     <Zap className="w-5 h-5 text-blue-600" />
-                    <h3 className="text-lg font-semibold text-gray-100">
+                    <h3 className="text-lg font-semibold text-gray-50">
                       Strengths Points of Your Resume
                     </h3>
                   </div>
@@ -113,10 +113,10 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                           key={index}
                           className="border-l-4 border-green-500 pl-3"
                         >
-                          <h4 className="font-medium text-gray-900 mb-1">
+                          <h4 className="font-medium text-gray-200 mb-1">
                             {String(index + 1).padStart(2, "0")}
                           </h4>
-                          <p className="text-sm text-gray-600">{strength}</p>
+                          <p className="text-sm text-gray-400">{strength}</p>
                         </div>
                       ))}
                     </div>
@@ -179,7 +179,7 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
             <div className="bg-[#0d101dc0] rounded-2xl p-6 shadow-sm mt-6 shadow-blue-500">
               <div className="flex items-center gap-2 mb-4">
                 <Lightbulb className="w-5 h-5 text-yellow-500" />
-                <h3 className="text-lg font-semibold text-gray-100">
+                <h3 className="text-lg font-semibold text-gray-50">
                   Weaknesses of Your Resume
                 </h3>
               </div>
@@ -191,10 +191,10 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                           key={index}
                           className="border-l-4 border-yellow-500 pl-3"
                         >
-                          <h4 className="font-medium text-gray-900 mb-1">
+                          <h4 className="font-medium text-gray-200 mb-1">
                             {String(index + 1).padStart(2, "0")}
                           </h4>
-                          <p className="text-sm text-gray-600">{suggestion}</p>
+                          <p className="text-sm text-gray-400">{suggestion}</p>
                         </div>
                       ))}
                     </div>

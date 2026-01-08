@@ -2,41 +2,44 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { Github, Linkedin, Twitter } from "lucide-react";
-// import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { Github, Linkedin, Sparkles, Twitter } from "lucide-react";
+
 
 const Footer = () => {
   const footerRef = useRef(null);
 
-  useEffect(() => {
-    gsap.fromTo(
-      footerRef.current,
-      { opacity: 0, y: 80 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: "top 85%",
-        },
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     footerRef.current,
+  //     { opacity: 0, y: 80 },
+  //     {
+  //       opacity: 1,
+  //       y: 0,
+  //       duration: 1.2,
+  //       ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: footerRef.current,
+  //         start: "top 85%",
+  //       },
+  //     }
+  //   );
+  // }, []);
 
   return (
     <footer
       ref={footerRef}
-      className="bg-gradient-to-br from-[#0f172a] to-[#020617] text-gray-300 px-6 md:px-16 py-16"
+      className="bg-linear-to-b from-black/92 to-gray-900 text-gray-300 px-6 md:px-16 py-16"
     >
       <div className="grid md:grid-cols-4 gap-10">
 
         {/* Brand */}
         <div>
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
+          <div className="flex items-center gap-2">
+            <Sparkles size={28} className=" text-linear-to-r from-teal-400 to-cyan-500 " />
+            <h2 className="text-3xl font-bold bg-linear-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
             CareerMentor AI
           </h2>
+          </div>
           <p className="mt-4 text-sm text-gray-400 leading-relaxed">
             Build ATS-friendly resumes, get AI career guidance,  
             and land your dream job faster 🚀

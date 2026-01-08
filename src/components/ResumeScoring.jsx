@@ -1,8 +1,27 @@
-import { Upload, Zap, TrendingUp, CheckCircle, AlertTriangle, TrendingDown } from 'lucide-react';
+import {
+  Upload,
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  AlertTriangle,
+  TrendingDown,
+} from "lucide-react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap/all";
 
 const ResumeScoring = () => {
+  // useGSAP(() => {
+  //   const paragraphTl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: ".resume-scoring",
+  //       start: "top center",
+  //       // markers:true,
+  //       scrub: true,
+  //     },
+  //   });
+  // });
   return (
-    <div className="min-h-screen bg-black text-white py-16 px-4">
+    <div className="resume-scoring min-h-screen bg-black text-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -16,8 +35,8 @@ const ResumeScoring = () => {
             </span>
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Upload your resume and get instant AI analysis with actionable insights to beat ATS
-            systems and stand out to recruiters.
+            Upload your resume and get instant AI analysis with actionable
+            insights to beat ATS systems and stand out to recruiters.
           </p>
         </div>
 
@@ -50,7 +69,13 @@ const ResumeScoring = () => {
                     className="transition-all duration-1000"
                   />
                   <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="gradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#06b6d4" />
                       <stop offset="100%" stopColor="#8b5cf6" />
                     </linearGradient>
@@ -104,7 +129,8 @@ const ResumeScoring = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Instant Upload</h3>
                   <p className="text-gray-400 text-sm">
-                    Drag and drop your resume in any format. Our AI processes it in seconds.
+                    Drag and drop your resume in any format. Our AI processes it
+                    in seconds.
                   </p>
                 </div>
               </div>
@@ -119,7 +145,8 @@ const ResumeScoring = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Deep Analysis</h3>
                   <p className="text-gray-400 text-sm">
-                    Get detailed scoring across 50+ criteria including ATS optimization, keyword density, and formatting.
+                    Get detailed scoring across 50+ criteria including ATS
+                    optimization, keyword density, and formatting.
                   </p>
                 </div>
               </div>
@@ -132,9 +159,12 @@ const ResumeScoring = () => {
                   <TrendingUp className="w-6 h-6 text-cyan-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Actionable Insights</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Actionable Insights
+                  </h3>
                   <p className="text-gray-400 text-sm">
-                    Get personalized recommendations to boost your resume score and stand out to recruiters.
+                    Get personalized recommendations to boost your resume score
+                    and stand out to recruiters.
                   </p>
                 </div>
               </div>
@@ -146,9 +176,13 @@ const ResumeScoring = () => {
                   <TrendingDown className="w-6 h-6 text-red-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2"> Weakness Analysis </h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {" "}
+                    Weakness Analysis{" "}
+                  </h3>
                   <p className="text-gray-400 text-sm">
-                    Identify and address weaknesses in your resume to improve your chances of landing interviews.
+                    Identify and address weaknesses in your resume to improve
+                    your chances of landing interviews.
                   </p>
                 </div>
               </div>
@@ -158,6 +192,6 @@ const ResumeScoring = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ResumeScoring;

@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import ProblemSection from "@/components/ProblemSection";
 import ResumeScoring from "@/components/ResumeScoring";
+import StatsSection from "@/components/StatsSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import TrustSection from "@/components/TrustSection";
 import Navbar from "@/shared/Navbar";
@@ -31,6 +32,7 @@ export default function Home() {
        <ResumeScoring/>
        <HowItWorks/>
        <TestimonialSection/>
+       <StatsSection/>
        <TrustSection/>
        <Footer/>
      </div>

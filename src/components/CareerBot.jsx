@@ -262,7 +262,7 @@ const CareerBot = () => {
                 className={`max-w-[80%] p-3 rounded-lg text-[12px] ${
                   msg.role === "user"
                     ? "self-end bg-primary text-white"
-                    : "self-start bg-gray-900"
+                    : "self-start bg-gray-900 text-blue-200"
                 }`}
               >
                 <Markdown>{msg.content}</Markdown>
