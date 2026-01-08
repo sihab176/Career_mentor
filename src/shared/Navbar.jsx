@@ -41,15 +41,12 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            {["Features",].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors animated-underline"
-              >
-                {item}
-              </a>
-            ))}
+            <Link
+              href="/"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors animated-underline"
+            >
+              Home
+            </Link>
             <Link
               href="/blog"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors animated-underline"
