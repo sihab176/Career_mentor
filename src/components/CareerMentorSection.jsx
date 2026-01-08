@@ -82,7 +82,7 @@ const CareerMentorSection = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="fdgdg"
-                className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                className="w-full px-4 py-3 pr-12 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary text-white rounded"
               />
               <button
                 onClick={handleSend}
@@ -150,7 +150,7 @@ const CareerMentorSection = () => {
             </div>
 
             {/* CTA Button */}
-            <button className="bg-blue-900 hover:bg-blue-950 text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2 transition-colors">
+            <button className="bg-primary hover:opacity-90 text-white font-semibold px-6 py-3 rounded flex items-center gap-2 transition-colors">
               Ask Career Mentor AI
               <ArrowRight className="w-5 h-5" />
             </button>

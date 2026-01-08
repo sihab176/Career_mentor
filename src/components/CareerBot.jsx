@@ -285,7 +285,7 @@ const CareerBot = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask your career question..."
-            className="w-full h-24 resize-none border border-blue-950 p-5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full h-18 resize-none border border-blue-950 p-5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <button
             type="submit"

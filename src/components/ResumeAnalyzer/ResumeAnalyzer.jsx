@@ -64,27 +64,7 @@ export default function ResumeAnalyzer() {
 
   return (
     <div className="bg-black/95 min-h-screen ">
-      {/* header */}
-      <header className="flex top-0 sticky z-10 bg-white items-center justify-between mb-8 px-6 py-3 border-b border-gray-200">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-            <FileText className="w-5 h-5 text-white" />
-          </div>
-          <h1 className="text-xl font-semibold text-gray-800">
-            AI Resume Analyzer
-          </h1>
-        </div>
-        <button className="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center hover:shadow-md transition-shadow">
-          <User className="w-5 h-5 text-gray-600" />
-        </button>
-      </header>
-      <section className=" max-w-7xl mx-auto ">
-        {/* <input
-          type="file"
-          accept=".pdf"
-          onChange={handleFileUpload}
-          className="border p-10 bg-blue-400"
-        /> */}
+      <section className=" max-w-7xl mx-auto  pt-24">
         <label
           htmlFor="file-upload"
           className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer bg-[#0d101dc0] hover:bg-black/80 transition"
