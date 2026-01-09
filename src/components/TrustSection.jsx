@@ -181,7 +181,7 @@ const TrustSection = () => {
 
                 {/* Hover indicator */}
                 <div
-                  className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-b-2xl transition-all duration-500 ${
+                  className={`absolute bottom-0 left-0 h-1 bg-linear-to-r from-cyan-500 to-blue-600 rounded-b-2xl transition-all duration-500 ${
                     hoveredCard === feature.id ? "w-full" : "w-0"
                   }`}
                 />
@@ -192,7 +192,7 @@ const TrustSection = () => {
       </div>
 
       {/* Bottom gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/50 to-transparent" />
     </section>
   );
 };

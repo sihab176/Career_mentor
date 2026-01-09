@@ -43,9 +43,9 @@ const ResumeScoring = () => {
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-8">
           {/* Score Card */}
-          <div className="bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-800">
+          <div className="bg-linear-to-br shadow-sky-700 hover:shadow-xl from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-800">
             {/* Circular Score */}
-            <div className="flex justify-center mb-12">
+            <div className="flex justify-center mb-12 ">
               <div className="relative w-64 h-64">
                 <svg className="transform -rotate-90 w-64 h-64">
                   <circle

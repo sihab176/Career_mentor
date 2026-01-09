@@ -62,9 +62,9 @@ const Hero = () => {
 
         <div className="absolute inset-0 bg-black/20"></div>
 
-        <div className="hero-content opacity-0 relative z-10 flex h-full items-center justify-center text-center text-white px-6">
+        <div className="hero-content opacity-0 relative z-10 flex h-full items-center justify-center text-center text-white px-6 lg:py-0 md:pt-18">
           <div>
-            <h1 className="hero-title text-blue-200 text-[3.3rem] md:text-[5.6rem] 2xl:text-[8.5rem] font-bold uppercase">
+            <h1 className="hero-title text-blue-200 md:text-[3rem] lg:text-[5.5rem] text-[2.1rem] font-bold uppercase">
               Your AI Career Agent for
             </h1>
 
@@ -72,26 +72,26 @@ const Hero = () => {
               style={{
                 clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
               }}
-              className="hero-text-scroll rotate-[-5deg] mb-12 border-[.5vw] border-black"
+              className="hero-text-scroll rotate-[-5deg] mb-12 border-[.5vw] border-black lg:w-[60vw] md:w-[60vw] md:mx-auto"
             >
-              <div className="bg-blue-900">
-                <h1 className="uppercase md:text-[5.5rem] py-1">
+              <div className="bg-blue-900 ">
+                <h1 className="uppercase md:text-[3rem] lg:text-[5.5rem] text-[2.5rem] py-1">
                   Smarter Futures
                 </h1>
               </div>
             </div>
 
-            <p className="mt-12 text-sm max-w-2xl mx-auto text-gray-200">
+            <p className="mt-12 lg:text-sm  text-[11px] max-w-2xl mx-auto text-gray-200">
               Transform your career trajectory with intelligent resume analysis,
               personalized AI mentorship, and data-driven guidance that gets you
               hired faster.
             </p>
 
             <div className="flex gap-4 justify-center mt-8">
-              <button className="bg-blue-900 px-10 py-3 rounded-full">
+              <button className="bg-blue-900 px-10 lg:py-3 py-2 rounded-full">
                 Get Started
               </button>
-              <button className="border border-white/30 px-8 py-3 rounded-full">
+              <button className="border border-white/30 px-8 lg:py-3 py-2 rounded-full">
                 Learn More
               </button>
             </div>

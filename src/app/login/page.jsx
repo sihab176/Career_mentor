@@ -1,4 +1,5 @@
 "use client";
+import SocialLogin from "@/shared/SocialLogin";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -81,7 +82,9 @@ const LoginPage = () => {
           <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
         </div>
         {/* SocialLogin */}
-        <div className="flex justify-center "></div>
+        <div className="flex justify-center ">
+          <SocialLogin/>
+        </div>
         <p className="text-xs mt-10 text-center sm:px-6 dark:text-gray-600">
           Don't have an account?
           <Link

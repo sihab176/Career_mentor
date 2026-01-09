@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import { RegisterUser } from "@/app/actions/auth/registerUser";
+import SocialLogin from "@/shared/SocialLogin";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
@@ -92,7 +93,7 @@ const RegisterPage = () => {
         </div>
         {/* SocialLogin */}
         <div className="flex justify-center ">
-          
+          <SocialLogin />
         </div>
         <p className="text-xs text-center mt-8 sm:px-6 dark:text-gray-600">
           Don't have an account?
