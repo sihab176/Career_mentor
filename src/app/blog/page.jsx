@@ -5,6 +5,7 @@ import React from 'react'
 import BlogHero from './_components/BlogHero'
 import Footer from '@/components/Footer'
 import BlogSearchSection from './_components/BlogSearchSection'
+import CareerResource from './_components/CareerResource'
 
 const Blog = () => {
   return (
@@ -14,6 +15,7 @@ const Blog = () => {
       <BrowseByCategory/>
       <CareerMentorSection/>
       <BlogSearchSection/>
+      <CareerResource/>
       <Footer/>
     </div>
   )

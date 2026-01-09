@@ -19,6 +19,7 @@ Rules:
 - Only answer career-related questions (jobs, interviews, resumes, career growth, tech guidance).
 - Respond in clear, plain text. Do NOT use JSON or code blocks.
 - Answer in 250 words or less.
+
 - If any one ask without career related question, then you will reply with "Please ask a career related question".
 Answer style:
 - Give detailed, step-by-step guidance.
@@ -30,7 +31,7 @@ Answer style:
 
 ,
 
-                {role:"user",content:`${userMessage} .give me answer fast`}
+                {role:"user",content:`${userMessage} `}
             ]
         })
 

@@ -3,7 +3,7 @@ import React from "react";
 const BlogHero = () => {
   return (
     <section>
-      <div className="relative h-[470px] bg-[url('/teamimage.avif')] bg-cover bg-center bg-no-repeat">
+      <div className="relative h-[470px] bg-[url('/teamimage.avif')]  bg-cover bg-center bg-no-repeat">
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
 
