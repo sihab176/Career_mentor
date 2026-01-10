@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+---
+# 🚀 Career Mentor AI & Resume Analyzer
 
-## Getting Started
+An AI-powered **Career Mentorship Platform** that helps users solve career-related problems, analyze resumes, and explore insightful blogs — all in one modern web application.
 
-First, run the development server:
+Built with **Next.js**, **Google Gemini AI**, and modern UI/UX practices.
+
+---
+
+## ✨ Features
+- 🤖 AI-powered career guidance chat
+- 📚 Educational blog posts and resources
+- 🔍 Personalized career path recommendations
+- 📱 Responsive design for all devices
+- ⚡ Fast and optimized performance with Next.js
+- 🔄 Real-time interaction with AI models
+
+### 🤖 Career Mentor Chatbot
+
+* AI-powered chatbot to answer career-related questions
+* Guidance on:
+
+  * Career paths
+  * Skill development
+  * Job preparation
+  * Technology recommendations
+* Powered by **Google Generative AI (Gemini)**
+
+---
+
+### 📄 Resume Analyzer (PDF)
+
+* Upload resume in **PDF format**
+* Automatically converts PDF → text
+* AI analyzes resume and provides:
+
+  * Overall resume score
+  * Strengths & weaknesses
+  * Missing sections
+  * ATS compatibility score
+  * Improvement suggestions
+* Designed for job seekers & students
+
+---
+
+### 📝 Blog Platform
+
+* Professional blog layout
+* Career-focused articles and insights
+* Clean, dark-theme friendly design
+* Optimized for readability and engagement
+
+---
+
+### 🔐 Authentication
+
+* Secure authentication using **NextAuth**
+* User session handling
+* Protected routes for AI tools
+
+---
+
+### 🎨 Modern UI & Animations
+
+* Smooth animations using **GSAP**
+* Icon system powered by **Lucide React**
+* Dark-theme friendly design
+* Responsive for all devices
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* **Next.js 16 (App Router)**
+* **React 19**
+* **GSAP & @gsap/react**
+* **Lucide React**
+* **React Markdown**
+* **React Hot Toast**
+
+### Database & Auth
+
+* **MongoDB**
+* **NextAuth.js**
+* **bcrypt** for password security
+
+---
+
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/career-mentor-ai.git
+cd career-mentor-ai
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Future Enhancements
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* Resume scoring history
+* User dashboard
+* Job recommendation engine
+* Multi-language support
+* Resume comparison feature
+* AI-powered cover letter generator
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧠 Inspiration
 
-To learn more about Next.js, take a look at the following resources:
+Built to help:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Students
+* Job seekers
+* Career switchers
+* Junior developers
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---

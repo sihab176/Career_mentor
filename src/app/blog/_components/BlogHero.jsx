@@ -5,7 +5,7 @@ const BlogHero = () => {
     <section>
       <div className="relative h-[470px] bg-[url('/teamimage.avif')]  bg-cover bg-center bg-no-repeat">
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60 z-0"></div>
+        <div className="absolute inset-0 bg-black/70 z-0"></div>
 
         {/* Content */}
         <div className="relative z-10 flex items-center justify-center h-full px-4">

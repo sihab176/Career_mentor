@@ -68,7 +68,7 @@ const LoginPage = () => {
             </div>
           </div>
           <button
-            className="block w-full p-3 text-center rounded-sm bg-primary"
+            className="block w-full p-3 text-center rounded-sm bg-primary text-white"
             fdprocessedid="p6vw3g"
           >
             Sign in
