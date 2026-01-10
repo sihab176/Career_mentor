@@ -1,19 +1,19 @@
-import { openai } from "@/components/OpenAiModel/OpenAiModel"
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
+// Gemini কনফিগারেশন
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY_SECOND);
 
 export async function POST(req) {
-    try {
-        const {userMessage}=await req.json()
+  try {
+      const {userMessage}=await req.json()
         console.log("user message",userMessage)
 
-        const completions= await openai.chat.completions.create({
-            model:"google/gemini-2.0-flash-exp:free",
-            // max_tokens:200,
-            messages:[
-{
-  role: "system",
-  content: `
+
+    // ২. Gemini-এর জন্য প্রম্পট (Prompt) তৈরি করা
+    const model = genAI.getGenerativeModel({ model: "models/gemini-flash-latest" });
+
+    const prompt = `
 You are a professional Career Coach AI.
 
 Rules:
@@ -28,33 +28,23 @@ Answer style:
 - Use bullets or examples if needed.
 - Keep tone professional and encouraging.
 - Assume the user wants actionable advice.
-`
+
+      ${userMessage}
+    `;
+
+    // ৩. Gemini থেকে রেসপন্স নেওয়া
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    let analysisText = response.text();
+
+    // অনেক সময় Gemini ব্যাকটিক দিয়ে JSON পাঠায়, সেটা ক্লিন করা
+    const cleanJson = analysisText.replace(/```json|```/g, "");
+    // const finalAnalysis = JSON.parse(cleanJson);
+
+    return NextResponse.json(cleanJson);
+
+  } catch (error) {
+    console.error("Error:", error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
 }
-
-,
-
-                {role:"user",content:`${userMessage} `}
-            ]
-        })
-
-        let raw =completions.choices[0].message?.content || ""
-         let clean = raw
-            .replace(/```json/gi, "")
-            .replace(/```/g, "")
-            .trim();
-
-            // const json= JSON.parse(clean)
-            // return NextResponse.json(json)
-            
-            console.log("raw message",raw)
-
-            return NextResponse.json({ reply: clean })
-
-
-    } catch (error) {
-        return NextResponse.json({ error: error.message }, { status: 500 });
-    }
-}
-
-
-// google/gemini-2.0-flash-exp:free

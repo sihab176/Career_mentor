@@ -125,48 +125,10 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
               </div>
 
               {/* Right Column - Resume Preview */}
-              {!imageUrl && (
-                <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-                  <div className="aspect-[8.5/11] bg-linear-to-br  from-gray-900 via-orange-900 to-gray-800 relative flex items-center justify-center">
-                    <div className="absolute inset-0 bg-linear-to-t  from-black/50 to-transparent"></div>
 
-                    <div className="relative w-48 h-48">
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-linear-to-br from-orange-400 to-red-400 rounded-full blur-2xl opacity-80"></div>
-
-                      <svg viewBox="0 0 200 200" className="relative z-10">
-                        <path
-                          d="M 0,150 L 80,80 L 100,100 L 120,70 L 200,150 Z"
-                          fill="#2d1810"
-                          opacity="0.9"
-                        />
-                        <path
-                          d="M 30,150 L 100,90 L 170,150 Z"
-                          fill="#3d2410"
-                          opacity="0.8"
-                        />
-                      </svg>
-                    </div>
-
-                    <div
-                      className="absolute"
-                      style={{ top: "45%", left: "55%" }}
-                    >
-                      <div className="w-6 h-6 bg-white rounded-full shadow-lg"></div>
-                      <div className="absolute top-0 left-0 w-6 h-6 bg-white rounded-full animate-ping opacity-75"></div>
-                    </div>
-
-                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t  from-black/60 to-transparent">
-                      <div className="flex items-center justify-between text-white text-sm">
-                        <span className="opacity-75">Resume Document</span>
-                        <span className="opacity-75">Page 1 of 1</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
               {imageUrl && (
                 <div className="h-fit sticky top-20">
-                  <Image
+                  <img
                     src={imageUrl}
                     alt="Resume"
                     width={800}

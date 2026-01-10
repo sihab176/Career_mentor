@@ -81,7 +81,7 @@ const CareerMentorSection = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="fdgdg"
+                placeholder="Ask your career question"
                 className="w-full px-4 py-3 pr-12 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary text-white rounded"
               />
               <button

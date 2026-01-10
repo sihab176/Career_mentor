@@ -5,7 +5,7 @@ const BlogSearchSection = () => {
     <section className="bg-black py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <h2 className="text-4xl md:text-4xl font-bold text-white mb-4">
           Find What You're{" "}
           <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
             Looking For

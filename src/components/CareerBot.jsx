@@ -198,17 +198,18 @@ const CareerBot = () => {
 
     try {
       // 2️⃣ AI API call
-      const res = await fetch("/api/career_chat_agent", {
+      const res = await fetch("/api/demoChatBot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userMessage: input }),
       });
 
       const data = await res.json();
+      // console.log("data", data.reply);
 
       const aiMessage = {
         role: "assistant",
-        content: data?.reply || "Something went wrong 😢",
+        content: data || "Something went wrong 😢",
         createdAt: new Date(),
       };
 
@@ -243,7 +244,9 @@ const CareerBot = () => {
       {/* Header */}
       <header className="flex justify-between items-center">
         <div>
-          <h1 className="font-semibold text-[19px]"><span className="text-blue-700">AI </span> Career Q/A Chat</h1>
+          <h1 className="font-semibold text-[19px]">
+            <span className="text-blue-700">AI </span> Career Q/A Chat
+          </h1>
           <p className="text-[11px] text-muted-foreground text-gray-600">
             Personalized career guidance powered by AI
           </p>
@@ -271,7 +274,32 @@ const CareerBot = () => {
 
             {loading && (
               <div className="self-start bg-gray-900 p-3 rounded-lg text-sm animate-pulse">
-                Thinking...
+                <div className="flex items-center justify-center gap-2">
+                  
+                  <div className="flex space-x-2 ">
+                    <div
+                      className="w-2 h-2 bg-gray-600 rounded-full animate-bounce"
+                      style={{
+                        animationDelay: "0ms",
+                        animationDuration: "600ms",
+                      }}
+                    ></div>
+                    <div
+                      className="w-2 h-2 bg-gray-600 rounded-full animate-bounce"
+                      style={{
+                        animationDelay: "150ms",
+                        animationDuration: "600ms",
+                      }}
+                    ></div>
+                    <div
+                      className="w-2 h-2 bg-gray-600 rounded-full animate-bounce"
+                      style={{
+                        animationDelay: "300ms",
+                        animationDuration: "600ms",
+                      }}
+                    ></div>
+                  </div>
+                </div>
               </div>
             )}
 
