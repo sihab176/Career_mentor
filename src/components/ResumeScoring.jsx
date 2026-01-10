@@ -8,20 +8,43 @@ import {
 } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
+import { useRef } from "react";
 
 const ResumeScoring = () => {
-  // useGSAP(() => {
-  //   const paragraphTl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".resume-scoring",
-  //       start: "top center",
-  //       // markers:true,
-  //       scrub: true,
-  //     },
-  //   });
-  // });
+  const containerRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(".resume-scoring", {
+      opacity: 0,
+      x: -90,
+      duration: 2,
+      delay: 0.5,
+      ease: "power3.out",
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 60%",
+
+      },
+    });
+    gsap.from(".features", {
+      opacity: 0,
+      x: 90,
+      duration: 2.5,
+      ease: "power3.out",
+      stagger: 0.35,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 60%",
+      },
+    });
+  });
+
   return (
-    <div className="resume-scoring min-h-screen bg-black text-white py-16 px-4">
+    <div
+      ref={containerRef}
+      className=" min-h-screen bg-black text-white py-16 px-4"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -43,7 +66,7 @@ const ResumeScoring = () => {
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-8">
           {/* Score Card */}
-          <div className="bg-linear-to-br shadow-sky-700 hover:shadow-xl from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-800">
+          <div className="resume-scoring bg-linear-to-br shadow-sky-700 hover:shadow-xl from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-800">
             {/* Circular Score */}
             <div className="flex justify-center mb-12 ">
               <div className="relative w-64 h-64">
@@ -121,7 +144,7 @@ const ResumeScoring = () => {
           {/* Features */}
           <div className="space-y-6">
             {/* Feature 1 */}
-            <div className="bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-800 hover:border-cyan-400/50 transition-all">
+            <div className="features bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-800 hover:border-cyan-400/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="bg-cyan-400/10 p-3 rounded-lg">
                   <Upload className="w-6 h-6 text-cyan-400" />
@@ -137,7 +160,7 @@ const ResumeScoring = () => {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-800 hover:border-purple-400/50 transition-all">
+            <div className="features bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-800 hover:border-purple-400/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="bg-purple-400/10 p-3 rounded-lg">
                   <Zap className="w-6 h-6 text-purple-400" />
@@ -153,7 +176,7 @@ const ResumeScoring = () => {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-800 hover:border-cyan-400/50 transition-all">
+            <div className="features bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-800 hover:border-cyan-400/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="bg-cyan-400/10 p-3 rounded-lg">
                   <TrendingUp className="w-6 h-6 text-cyan-400" />
@@ -170,7 +193,7 @@ const ResumeScoring = () => {
               </div>
             </div>
             {/* Feature 4 */}
-            <div className="bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-800 hover:border-red-400/50 transition-all">
+            <div className="features bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-800 hover:border-red-400/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="bg-cyan-400/10 p-3 rounded-lg">
                   <TrendingDown className="w-6 h-6 text-red-500" />

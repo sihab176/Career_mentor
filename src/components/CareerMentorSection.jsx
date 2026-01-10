@@ -1,6 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Briefcase, Send, ArrowRight, Check, Sparkles } from "lucide-react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const CareerMentorSection = () => {
   const [message, setMessage] = useState("");
@@ -19,8 +21,37 @@ const CareerMentorSection = () => {
     }
   };
 
+    const containerRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(".chat-bot", {
+      opacity: 0,
+      x: -90,
+      duration: 2,
+      delay: 0.5,
+      ease: "power3.out",
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 60%",
+
+      },
+    });
+    gsap.from(".text-field", {
+      opacity: 0,
+      x: 90,
+      duration: 2.5,
+      ease: "power3.out",
+      stagger: 0.35,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 60%",
+      },
+    });
+  });
+
   return (
-    <section className=" bg-linear-to-b from-black/91 to-gray-900 min-h-screen py-24">
+    <section ref={containerRef} className=" bg-linear-to-b from-black/91 to-gray-900 min-h-screen py-24">
       <div className="w-full max-w-7xl    mx-auto mt-10">
         <h1 className="text-4xl font-bold text-white mb-4 text-center">
           Chat with Career{" "}
@@ -35,7 +66,7 @@ const CareerMentorSection = () => {
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-16">
           {/* Content - Left Side */}
-          <div className="bg-gray-950 rounded-2xl shadow-lg border border-blue-700 p-8">
+          <div className="chat-bot bg-gray-950 rounded-2xl shadow-lg border border-blue-700 p-8">
             {/* Header */}
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-blue-700">
               <div className="bg-blue-900 rounded-full p-3">
@@ -94,7 +125,7 @@ const CareerMentorSection = () => {
           </div>
 
           {/* Content - Right Side */}
-          <div>
+          <div className="text-field">
             {/* AI-Powered Badge */}
             <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4" />

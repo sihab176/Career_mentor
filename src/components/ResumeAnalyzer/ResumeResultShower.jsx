@@ -100,7 +100,7 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                 {/* Strengths Points */}
                 <div className="bg-[#0d101dc0] rounded-2xl p-6 shadow-sm shadow-blue-500">
                   <div className="flex items-center gap-2 mb-4">
-                    <Zap className="w-5 h-5 text-blue-600" />
+                    <Zap className="w-5 h-5 text-green-600" />
                     <h3 className="text-lg font-semibold text-gray-50">
                       Strengths Points of Your Resume
                     </h3>
@@ -142,7 +142,7 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
               <div className="flex items-center gap-2 mb-4">
                 <Lightbulb className="w-5 h-5 text-yellow-500" />
                 <h3 className="text-lg font-semibold text-gray-50">
-                  Weaknesses of Your Resume
+                  Suggestions & Tips for Improvement
                 </h3>
               </div>
 
@@ -151,7 +151,7 @@ const ResumeResultShower = ({ imageUrl, extractedText }) => {
                       {extractedText.suggestions.map((suggestion, index) => (
                         <div
                           key={index}
-                          className="border-l-4 border-yellow-500 pl-3"
+                          className="border-l-4 border-blue-500 pl-3"
                         >
                           <h4 className="font-medium text-gray-200 mb-1">
                             {String(index + 1).padStart(2, "0")}

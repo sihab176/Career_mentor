@@ -1,3 +1,5 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import {
   FileText,
   Briefcase,
@@ -6,8 +8,11 @@ import {
   TrendingUp,
   Sparkles,
 } from "lucide-react";
+import { useRef } from "react";
 
 const BrowseByCategory = () => {
+  const sectionRef = useRef(null);
+  
   const categories = [
     {
       id: 1,
@@ -53,8 +58,22 @@ const BrowseByCategory = () => {
     },
   ];
 
+  useGSAP(()=>{
+       gsap.from(".Category-card", {
+        opacity: 0,
+        y: 60,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.25,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+        },
+      });
+  })
+
   return (
-    <section className="bg-linear-to-b from-black/92 to-gray-900 relative min-h-screen py-24">
+    <section ref={sectionRef} className="bg-linear-to-b from-black/92 to-gray-900 relative min-h-screen py-24">
       {/* Background effects */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" />
@@ -82,7 +101,7 @@ const BrowseByCategory = () => {
             return (
               <button
                 key={category.id}
-                className="flex flex-col items-center justify-center p-6 bg-gray-950  rounded-xl border border-blue-700 hover:border-teal-500 hover:shadow-md transition-all duration-200 cursor-pointer group"
+                className="Category-card flex flex-col items-center justify-center p-6 bg-gray-950  rounded-xl border border-blue-700 hover:border-purple-900 hover:shadow-md transition-all duration-200 cursor-pointer group"
               >
                 <div
                   className={` bg-blue-300 rounded-lg p-4 mb-4 group-hover:scale-110 transition-transform duration-200`}

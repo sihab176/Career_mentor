@@ -42,13 +42,19 @@ const ProblemSection = () => {
         stagger: 0.01,
       });
 
-      // gsap.from(".career-card", {
-      //   y: 50,
-      //   opacity: 0,
-      //   duration: 1,
-      //   stagger: 0.2, // একটির পর একটি কার্ড আসবে
-      //   ease: "power3.out",
-      // });
+        gsap.from(".career-card", {
+        opacity: 0,
+        y: 60,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.25,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 70%",
+        },
+      });
+
+  
     },
 
     { scope: containerRef }
@@ -95,7 +101,7 @@ const ProblemSection = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className=" bg-[#111113] hover:shadow-xl hover:shadow-blue-600/20 border border-gray-800 p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 hover:border-gray-600 hover:scale-105"
+            className="career-card bg-[#111113] hover:shadow-xl hover:shadow-blue-600/20 border border-gray-800 p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 hover:border-gray-600 hover:scale-105"
           >
             <div className="bg-[#1a1a1c] p-4 rounded-xl mb-6 shadow-inner">
               {card.icon}

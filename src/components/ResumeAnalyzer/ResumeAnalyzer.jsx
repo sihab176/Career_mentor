@@ -52,7 +52,7 @@ export default function ResumeAnalyzer() {
 
       const result = await response.json();
       console.log("result resume", result);
-      setExtractedText(result); // এখানে আপনার টেক্সট চলে আসবে
+      setExtractedText(result); 
     } catch (error) {
       console.error("Error extracting text:", error);
     } finally {

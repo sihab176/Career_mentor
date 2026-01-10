@@ -1,8 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef, useState } from "react";
 
 const TrustSection = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const sectionRef = useRef(null);
 
   const features = [
     {
@@ -112,9 +115,41 @@ const TrustSection = () => {
         "Multi-factor authentication and granular permission controls.",
     },
   ];
+  
+  // useGSAP(
+  //   () => {
+  //     gsap.from(".step-card", {
+  //       opacity: 0,
+  //       y: 60,
+  //       duration: 0.8,
+  //       ease: "power3.out",
+  //       stagger: 0.25,
+  //       scrollTrigger: {
+  //         trigger: containerRef.current,
+  //         start: "top 70%",
+  //       },
+  //     });
+  //   },
+  //   { scope: containerRef }
+  // );
+
+   
+  useGSAP(()=>{
+    gsap.from(".trust-section-card",{
+      opacity:0,
+      y:60,
+      duration:0.8,
+      ease: "power3.out",
+      stagger:0.25,
+      scrollTrigger:{
+        trigger:sectionRef.current,
+        start:"top 70%"
+      }
+    })
+  })
 
   return (
-    <section className="relative min-h-screen bg-black py-20 px-4 overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-screen bg-black py-20 px-4 overflow-hidden">
       {/* Animated background gradient */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse" />
@@ -147,7 +182,7 @@ const TrustSection = () => {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group relative"
+              className="trust-section-card group relative"
               onMouseEnter={() => setHoveredCard(feature.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
